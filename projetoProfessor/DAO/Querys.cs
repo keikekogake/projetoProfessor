@@ -136,18 +136,17 @@ namespace projetoProfessor.DAO
                 //Executa a query
                 try
                 {
-                    Professor prof = new Professor();
+                    
                     var dtr = cmd.ExecuteReader();
                     while(dtr.Read())
                     {
-                        
-                        prof.Codigo = Int16.Parse(dtr.GetValue(0).ToString());
-                        prof.Nome = dtr.GetValue(1).ToString();
-                        prof.Email = dtr.GetValue(2).ToString();
-                        prof.Senha = dtr.GetValue(3).ToString();
-                        prof.Telefone = dtr.GetValue(4).ToString();
-                        prof.Ativo = bool.Parse(dtr.GetValue(5).ToString());
-
+                        Professor prof = new Professor();
+                        prof.Codigo = Int16.Parse(dtr[0].ToString());
+                        prof.Nome = dtr[1].ToString();
+                        prof.Email = dtr[2].ToString();
+                        prof.Senha = dtr[3].ToString();
+                        prof.Telefone = dtr[4].ToString();
+                        prof.Ativo = dtr[5].ToString();
                         list.Add(prof);
                     }
                 }

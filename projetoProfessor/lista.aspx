@@ -11,7 +11,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ListBox ID="lbProfessores" runat="server"></asp:ListBox>
+            <asp:GridView ID="tbProfessor" runat="server"></asp:GridView>
             <br /><br /><br />
             <asp:Button ID="btnAdicionar" runat="server" Text="Adicionar Novo"/>
             <br /><br />

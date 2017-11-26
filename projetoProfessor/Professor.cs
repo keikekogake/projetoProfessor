@@ -12,13 +12,13 @@ namespace projetoProfessor
         public string Email { get; set; }
         public string Senha { get; set; }
         public string Telefone { get; set; }
-        public bool Ativo { get; set; }
+        public string Ativo { get; set; }
 
         public Professor()
         {
         }
 
-        public Professor(string nome, string email, string senha, string telefone, bool ativo)
+        public Professor(string nome, string email, string senha, string telefone, string ativo)
         {
             Nome = nome;
             Email = email;

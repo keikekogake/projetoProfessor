@@ -14,9 +14,11 @@ namespace projetoProfessor
         {
             Querys exec = new Querys();
 
-            exec.ConsultaProfessores();
+            List<Professor> list = exec.ConsultaProfessores();
 
-            
+            tbProfessor.DataSource = list;
+
+            tbProfessor.DataBind();
         }
 
         protected void btnSair_Click(object sender, EventArgs e)

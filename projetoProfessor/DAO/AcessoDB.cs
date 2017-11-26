@@ -10,11 +10,6 @@ namespace projetoProfessor.DAO
     public abstract class AcessoDB
     {
         public MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-
         protected bool AbrirConexao()
         {
             // server = "localhost";
